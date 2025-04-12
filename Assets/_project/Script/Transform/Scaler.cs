@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Scaler : MonoBehaviour
 {
-    [SerializeField] float _speed;
-    private void FixedUpdate() =>
-        transform.localScale += Vector3.one * _speed;
+    [SerializeField] private float _speed;
+
+    private void Update() =>
+        transform.localScale += Vector3.one * _speed * Time.deltaTime;
 }

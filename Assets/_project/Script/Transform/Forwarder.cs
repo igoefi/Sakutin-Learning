@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Forwarder : MonoBehaviour
 {
-    private void FixedUpdate() =>
-        transform.position += transform.forward * .1f;
+    [SerializeField] private float _speed;
+
+    private void Update() =>
+        transform.position += transform.forward * _speed * Time.deltaTime;
 }
