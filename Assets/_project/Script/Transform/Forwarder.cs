@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Forward : MonoBehaviour
+public class Forwarder : MonoBehaviour
 {
     private void FixedUpdate() =>
         transform.position += transform.forward * .1f;
